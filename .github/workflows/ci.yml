@@ -1,0 +1,22 @@
+
+name: DevOps AI Test Pipeline
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Test pipeline
+        run: |
+          echo "DevOps AI test pipeline"
+          echo "Checking GitHub Actions"
+          echo "Pipeline successful"
+
